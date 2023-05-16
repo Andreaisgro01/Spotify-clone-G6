@@ -29,9 +29,9 @@
             </svg></button>
             </div>
             <div>
-            <button type="button" class="btn text-light"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16">
+            <button type="button" class="btn text-light"><a class="text-light" href="../index.html"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16">
                 <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146ZM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5Z"/>
-            </svg> <span class="ms-3">Home</span></button>
+            </svg></a> <span class="ms-3">Home</span></button>
             </div>
             <div>
             <button type="button" class="btn text-light"><svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
@@ -106,12 +106,14 @@
           
         </div>
       <!-- Main content -->
-        <div class="color-17 col-7">
-          <nav class="d-flex py-2">
+        <div class="color-17 col-7 px-0">
+
+          <!-- Navbar  -->
+          <nav class="d-flex py-2 position-fixed top-0">
             <div
               class="me-auto d-flex justify-content-center align-items-center p-1"
             >
-              <a href="#" class="navbarSvg">
+              <a href="#" class="navbarSvg ps-1 pe-2 pb-1 pt-0 text-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
@@ -126,7 +128,7 @@
                   />
                 </svg>
               </a>
-              <a href="#" class="navbarSvg">
+              <a href="#" class="navbarSvg ps-2 pe-1 pb-1 pt-0 text-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
@@ -174,17 +176,107 @@
             </div>
           </nav>
 
-              <!-- main card -->
-              <div class="col-12 bg-black my-4 p-3">
-              </div>
-              <!-- buongiorno -->
-              <div class="col-12">
-              </div>
-              <!-- cards container -->
-              <div class="col-12">
+          <div class="col-12 bg-success ps-2 pe-3">
+           <div class="row">
+              <div class="col12">
+                
+              </div>            
+           </div>
+          </div>
 
-              </div>
+
+          <div class="col-12">
+            <!-- Row con Button -->
+              <div id="tools-container" class="col-12  my-4 p-3">
+                <!-- player -->
+                <button id="play-button" class="border-0"><svg  
+                    xmlns="http://www.w3.org/2000/svg" 
+                    width="30" 
+                    height="30" 
+                    fill="black" 
+                    class="bi bi-play-fill" 
+                    viewBox="0 0 16 16" 
+                    id="play-icon">
+                    <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/>
+                  </svg> 
+                </button>
+                <!-- cuore -->
+                <button class="bg color-player border-0 ms-2"><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="25"
+                height="25"
+                fill="grey"
+                class="bi bi-heart text-white"
+                viewBox="0 0 16 16"
+                id="heart-tool">
+                <path
+                  d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"
+                />
+              </svg>
+            </button>
+            <!-- download -->
+            <button class="bg color-player border-0 ms-2"><svg 
+              xmlns="http://www.w3.org/2000/svg" 
+              width="25" 
+              height="25" 
+              fill="grey" 
+              class="bi bi-arrow-down-circle text-light" 
+              viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z"/>
+              </svg>
+            </button>
+            <!-- altro...  -->
+            <button class="bg color-player border-0 ms-2">
+              <svg xmlns="http://www.w3.org/2000/svg" 
+              width="25" 
+              height="25" 
+              fill="grey" 
+              class="bi bi-three-dots text-light" 
+              viewBox="0 0 16 16">
+                <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
+            </svg>
+            </svg>
+            </button>
             </div>
+
+            <!-- Generalità album -->
+            <div class="col-12">
+              <div class="row text-secondary fw-bold  fw-bold pb-2 ms-2 me-2">
+                
+                <div class="col-7"> <span class="mx-3">#</span> TITOLO</div>
+                <div class="col-4">RIPRODUZIONI</div>
+                <div class="col-1 d-flex flex-row-reverse pe-5"><svg 
+                  xmlns="http://www.w3.org/2000/svg" 
+                  width="16" 
+                  height="16" 
+                  fill="currentColor" 
+                  class="bi bi-clock mt-1" 
+                  viewBox="0 0 16 16">
+                  <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+                  <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+                </svg></div>
+              </div>
+              
+                  
+                <div class="row border-top border-secondary pt-2 text-secondary ms-2 me-2">
+                  <div class="col-7 d-flex align-items-center"><span class="px-3 text-light">1</span>
+                    <div>
+                      <p class="text-light fw-bold mb-0">Montanelli - intro</p>
+                      <p class="mb-0">Pinguini tattici nucleari</p>
+                    </div>
+                  </div>
+                  <div class="col-4 d-flex align-items-center">694.578</div>
+                  <div class="col-1 d-flex align-items-center flex-row-reverse pe-5">1:28</div>
+                </div>
+              
+
+
+            </div>
+           </div>
+           
+              
+              
+        </div>
       <!-- aside right -->
         <div class="col-2 bg-black">
           <div class="container d-flex align-content-center mt-4">
@@ -515,5 +607,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="../assets/script/player.js"></script>
+    <script src="../assets/script/album.js"></script>
   </body>
 </html>
