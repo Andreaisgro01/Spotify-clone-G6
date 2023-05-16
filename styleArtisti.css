@@ -1,0 +1,24 @@
+#artistImage{
+    background-image: url(assets/imgs/main/image-11.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+
+
+}
+
+
+.artistName{
+    font-size: 3.5rem;
+    font-weight: bold;
+}
+
+.spunta{
+    width: 3%;
+}
+
+.sottotitoli{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
