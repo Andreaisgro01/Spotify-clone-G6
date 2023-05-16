@@ -2,6 +2,8 @@
 body{
   box-sizing: border-box;
 }
+
+/* Button */
 #play-button {
   background-color: #1FDF64;
   border-radius: 100px;
@@ -13,8 +15,10 @@ body{
   padding: 2px 0 0 2px; 
 }
 
-
-
+.underline-me:hover{
+  text-decoration: underline !important; 
+  color: lightgray !important;
+}
 
 .color-17 {
   background-image: linear-gradient(#171717, #060606);
