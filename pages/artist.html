@@ -13,7 +13,8 @@
       integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/artist.css">
   </head>
 
   <body class="h-100">
@@ -107,11 +108,13 @@
         </div>
       <!-- Main content -->
         <div class="color-17 col-7">
-          <nav class="d-flex py-2">
+
+          <!-- navbar -->
+          <nav class="d-flex py-2 position-fixed top-0">
             <div
               class="me-auto d-flex justify-content-center align-items-center p-1"
             >
-              <a href="#" class="navbarSvg">
+              <a href="#" class="navbarSvg ps-1 pe-2 pb-1 pt-0 text-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
@@ -126,7 +129,7 @@
                   />
                 </svg>
               </a>
-              <a href="#" class="navbarSvg">
+              <a href="#" class="navbarSvg ps-2 pe-1 pb-1 pt-0 text-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
@@ -173,17 +176,97 @@
               </div>
             </div>
           </nav>
+          
+            <div class="row pt-5" id="artistImage" >
+                
+              <!-- Top -->
+              <div class="col-12 d-flex flex-column text-light pt-5">
+                <p class="pt-5 mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#3E91F4" class="bi bi-patch-check-fill" viewBox="0 0 16 16">
+                  <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708z"/>
+                </svg> Artista Verificato</p>
+                <h2 class="artistName mb-3">Nome Artista</h1>
+                <p class="py-2">Followers Artista</p>
+              </div>
+            </div>
 
-              <!-- main card -->
-              <div class="col-12 bg-black my-4 p-3">
-              </div>
-              <!-- buongiorno -->
-              <div class="col-12">
-              </div>
-              <!-- cards container -->
-              <div class="col-12">
+            <div class="row">
+               <div id="tools-container" class="col-12  my-4 p-3">
+                <!-- player -->
+                <button id="play-button" class="border-0"><svg  
+                    xmlns="http://www.w3.org/2000/svg" 
+                    width="30" 
+                    height="30" 
+                    fill="black" 
+                    class="bi bi-play-fill" 
+                    viewBox="0 0 16 16" 
+                    id="play-icon">
+                    <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/>
+                  </svg> 
+                </button>
+                <!-- following -->
+                <button class="btn btn-outline-light ms-4 me-2"><small class="fw-bold">FOLLOWING</small></button>
+            <!-- altro...  -->
+            <button class="border-0 ms-2 bg-transparent">
+              <svg xmlns="http://www.w3.org/2000/svg" 
+              width="25" 
+              height="25" 
+              fill="grey" 
+              class="bi bi-three-dots text-light" 
+              viewBox="0 0 16 16">
+                <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
+            </svg>
+            </svg>
+            </button>
 
-              </div>
+            </div>
+            </div>
+
+            <div class="row mt-5 text-light">
+                  <!-- buongiorno -->
+                  <div class="col-7 mx-4 ">
+                    <span class="sottotitoli">Popolari</span> 
+
+                    <div class="row align-items-baseline" id="songTarget">
+                        <div class="col-8 mt-5">
+                            <span>1</span>
+                            <img src="https://placekitten.com/40" alt="foto">
+                            <span>BRANO</span>
+                        </div>
+                        <div class="col-3">
+                            <span>ASCOLTI</span>
+                        </div>
+                        <div class="col-1">
+                            <span>LENGHT</span>
+                        </div>
+                        <a href="#" class="btn text-secondary text-start mt-2 fw-bold">VISUALIZZA ALTRO</a>
+                    </div>
+
+
+                  </div>
+                  <!-- cards container -->
+                  <div class="col-4 ms-5 ">
+                    <span class="sottotitoli">Brani che ti piacciono</span>
+                    <div class="card bg-transparent text-light mt-2">
+                        <div class="row g-0">
+                          <div class="col-4 mt-3">
+                            <img src="https://placekitten.com/100" class="img-fluid rounded-circle" alt="Card title">
+                          </div>
+                          <div class="col-8">
+                            <div class="card-body">
+                              <h6 class="card-title">Hai messo Mi piace a 11 brani</h5>
+                              <p class="card-text">NOME ARTISTA</p>
+                                <div id="artistLikes">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="green" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                                      </svg>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+
+            </div>
             </div>
       <!-- aside right -->
         <div class="col-2 bg-black">
