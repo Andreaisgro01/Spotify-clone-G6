@@ -21,93 +21,90 @@
     <div class="container-fluid h-100">
       <div class="row h-100">
       <!-- aside left :)-->
-        <div class="col-3 bg-black"> 
-          <!-- primi 4 bottoni -->
-          <div class="buttons-container mt-4">    
-            <div>
-              <a href="../index.html">
-                <button type="button" class="btn text-light ms-1"><svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-three-dots" viewBox="0 0 16 16">
-                  <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
-              </svg></button>
-              </a>
-            </div>
-            <div>
-            <button type="button" class="btn text-light"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16">
-                <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146ZM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5Z"/>
-            </svg> <span class="ms-3">Home</span></button>
-            </div>
-            <div>
-            <button type="button" class="btn text-light"><svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-            </svg><span class="ms-4">Cerca </span></button>
-            </div>
-            <div>
-            <button type="button" class="btn text-light "><svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor " class="bi bi-collection" viewBox="0 0 16 16">
-                <path d="M2.5 3.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-11zm2-2a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1h-7zM0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6v7zm1.5.5A.5.5 0 0 1 1 13V6a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5h-13z"/>
-            </svg> <span class="ms-4">La tua libreria </span></button>
-            </div>
-        </div> 
-        <!-- creo le playlists -->
-        <div class="playlist-container mt-5 border-bottom border-secondary ms-3">
-            <div>
-            <button id="add-playlist" type="button" class="btn text-light px-2 mb-2"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
-                <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
-              </svg> </button> <span class="ms-4 text-light">Crea playlist </span>
-            </div>
-            <div>
-                <button type="button" id="Favourite-songs" class="btn text-light px-2 mb-2 "><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="gray" class="bi bi-heart-fill" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
-                  </svg> </button> <span class="ms-4 text-light">Brani che ti piacciono </span>
-            </div>
-            <div>
-            <button type="button" class="btn text-light bg-success px-2"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="darkgreen" class="bi bi-bookmark-fill" viewBox="0 0 16 16">
-                <path d="M2 2v13.5a.5.5 0 0 0 .74.439L8 13.069l5.26 2.87A.5.5 0 0 0 14 15.5V2a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2z"/>
-              </svg> </button> <span class="ms-4 text-light">I tuoi episodi</span>
-            </div>
-            <div class="mt-5"></div>
-        </div>
-        <!-- Lista di playlist -->
-        <div class="list-container">
-            <ul class="list-group text-light mt-5 ms-3 list-unstyled">
-                <li>MIX ANNI 80</li>
-                <li>Hip Hop from the 90's</li>
-                <li>Good save the qeen</li>
-                <li>How to kill the music</li>
-                <li>Mix chill</li>
-                <li>Summer hits 2023</li>
-                <li>Romance songs</li>
-                <li>Love is in the air</li>
-                <li>Japan anime songs</li>
-                <li>Reaggeton</li>
-                <li>Electro music</li>
-                <li>Frenchcore</li>
-                <li>music of winter</li>
-                <li>Daily mix 1</li>
-                <li>gymbro</li>
-                <li>worktime</li>
-                <li>Plastic music</li>
-                <li>The last dance</li>
-                <li>One in a milion</li>
-                <li>best podcast's</li>
-                <li>Everyday is saturday</li>
-                <li>Sad music</li>
-                <li>Italian Indie</li>
-                <li>Rock and roll</li>
-                <li>Techno music</li>
-                <li>Fabolous playlist</li>
-                <li>That's a good day</li>
-                <li>Music for the shower</li>
-                <li>God bless ignorance</li>
-                <li>Ed sheeran</li>
-                <li>Daft Punk</li>
-                <li>Live recording</li>
-                <li>Classic music</li>
-                <li>Daily mix 4</li>
-                <li>Going hard</li>
-            </ul>
-        </div>
-          
-        </div>
+      <div class="col-3 bg-black"> 
+        <!-- primi 4 bottoni -->
+        <div class="buttons-container mt-4">    
+          <div>
+            <button type="button" class="btn text-light"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-three-dots" viewBox="0 0 16 16">
+              <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
+          </svg></button>
+          </div>
+          <div>
+          <button type="button" class="btn color-grey"><a class="color-grey" href="../index.html"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16">
+              <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146ZM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5Z"/>
+          </svg></a> <span class="ms-4 fw-bold color-grey">Home</span></button>
+          </div>
+          <div>
+          <button type="button" class="btn color-grey"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+              <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+          </svg><span class="ms-4 fw-bold color-grey">Cerca </span></button>
+          </div>
+          <div>
+          <button type="button" class="btn color-grey"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor " class="bi bi-collection" viewBox="0 0 16 16">
+              <path d="M2.5 3.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-11zm2-2a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1h-7zM0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6v7zm1.5.5A.5.5 0 0 1 1 13V6a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5h-13z"/>
+          </svg> <span class="ms-4 fw-bold">La tua libreria </span></button>
+          </div>
+      </div> 
+      <!-- creo le playlists -->
+      <div class="playlist-container mt-5 ps-2 border-bottom border-secondary">
+          <div>
+          <button id="add-playlist" type="button color-grey" class="btn text-light px-2 mb-2 border-0"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+              <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+            </svg> </button> <span class="ms-4 fw-bold color-grey">Crea playlist </span>
+          </div>
+          <div>
+              <button type="button" id="Favourite-songs" class="btn color-grey px-2 mb-2 border-0"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="gray" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                </svg> </button> <span class="ms-4 fw-bold color-grey">Brani che ti piacciono </span>
+          </div>
+          <div>
+          <button type="button" class="btn color-grey bg-success px-2 border-0 mb-3"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="darkgreen" class="bi bi-bookmark-fill" viewBox="0 0 16 16">
+              <path d="M2 2v13.5a.5.5 0 0 0 .74.439L8 13.069l5.26 2.87A.5.5 0 0 0 14 15.5V2a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2z"/>
+            </svg> </button> <span class="ms-4 fw-bold color-grey">I tuoi episodi</span>
+          </div>
+      </div>
+      <!-- Lista di playlist -->
+      <div class="list-container">
+          <ul id="lista-salvati"class="list-group color-grey mt-3 ps-2 list-unstyled">
+              <li class="mt-0">MIX ANNI 80 🎸</li>
+              <li>Hip Hop from the 90's 🔮</li>
+              <li>✨ Good save the qeen</li>
+              <li>How to kill the music 😭 = italian trap</li>
+              <li>Mix chill </li>
+              <li>Romance songs 🐳 </li>
+              <li>🤬 Love is in the air</li>
+              <li>Japan anime songs 🐦‍⬛ form 2000</li>
+              <li>Reaggeton 😳</li>
+              <li>🤯 Electro music</li>
+              <li>🐣 Frenchcore baby Pulcino pio inspired</li>
+              <li>🐧 music of winter</li>
+              <li>Daily mix 1</li>
+              <li>😶‍🌫️ gymbro</li>
+              <li>worktime 👽</li>
+              <li>Plastic music 🥶</li>
+              <li>The last dance</li>
+              <li>🦚 One in a milion</li>
+              <li>Summer hits 2020-2023 😤 LOCK DOWN</li>
+              <li>best podcast's 🎸 IN THE world</li>
+              <li>Everyday is saturday</li>
+              <li>🐳 Sad music 🔮</li>
+              <li>🐦‍⬛ Italian Indie - Playlist Condivisa</li>
+              <li>Rock and roll - Easy friday's eavening </li>
+              <li>Techno music for sunday morning</li>
+              <li>👽 Fabolous 👽 playlist of aliens</li>
+              <li>🥶 That's a good day</li>
+              <li>😶‍🌫️ Music for the shower</li>
+              <li>God bless ignorance🤯</li>
+              <li>Ed sheeran 😭</li>
+              <li>Daft Punk 😤 Love</li>
+              <li>Live recording</li>
+              <li>Classic music 😳</li>
+              <li>Daily mix 4</li>
+              <li>Going hard 🤬🤬🤬🤬🤬</li>
+          </ul>
+      </div>
+        
+      </div>
       <!-- Main content -->
         <div class="color-17 col-7">
 
@@ -271,110 +268,110 @@
             </div>
             </div>
       <!-- aside right -->
-        <div class="col-2 bg-black">
-          <div class="container d-flex align-content-center mt-4">
+      <div class="col-2 bg-black">
+        <div class="container d-flex align-content-center mt-4">
+        
+          <div class="h5 text-light mt-2 flex-grow-1">
+            Attività amici
+          </div>
+        <div class="text-end">
+          <a href="#" class="btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-person-plus side-icons" viewBox="0 0 16 16">
+              <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H1s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C9.516 10.68 8.289 10 6 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+              <path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"/>
+            </svg>
+          </a>
+          <a href="#" class="btn xicon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-x side-icons" viewBox="0 0 16 16">
+              <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+            </svg>
+          </a>
+        </div>
           
-            <div class="h5 text-light mt-2 flex-grow-1">
-              Attività amici
-            </div>
-          <div class="text-end">
-            <a href="#" class="btn">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-person-plus side-icons" viewBox="0 0 16 16">
-                <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H1s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C9.516 10.68 8.289 10 6 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
-                <path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"/>
+    </div>
+
+    <div class="container mt-4">
+      <div class="card mb-3 bg-black color-grey">
+        <div class="row g-0">
+          <div class="col-2">
+          <img src="https://placekitten.com/100" class="img-fluid rounded-circle mt-3" alt="Card title">
+          </div>
+          <div class="col-8">
+            <div class="card-body">
+            <h6 class="card-title">Charlie Hookham</h6>
+            <p class="card-text fs-6">In Camera • Yumi Zouma</p>
+            <p class="card-text fs-6">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-vinyl" viewBox="0 0 16 16">
+                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                <path d="M8 6a2 2 0 1 0 0 4 2 2 0 0 0 0-4zM4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0z"/>
+                <path d="M9 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
               </svg>
-            </a>
-            <a href="#" class="btn xicon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-x side-icons" viewBox="0 0 16 16">
-                <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+              EP III
+            </p>
+
+            </div>
+          </div>
+            <div class="col-2 mt-3">
+              <p class="card-text fs-6 text-end">4 ore</p>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt-4">
+      <div class="card mb-3 bg-black color-grey">
+        <div class="row g-0">
+          <div class="col-2">
+          <img src="https://placekitten.com/100" class="img-fluid rounded-circle mt-3" alt="Card title">
+          </div>
+          <div class="col-8">
+            <div class="card-body">
+            <h6 class="card-title">lightdark02</h6>
+            <p class="card-text fs-6">Aimed to Kill • Jade LeMac</p>
+            <p class="card-text fs-6">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-vinyl" viewBox="0 0 16 16">
+                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                <path d="M8 6a2 2 0 1 0 0 4 2 2 0 0 0 0-4zM4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0z"/>
+                <path d="M9 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
               </svg>
-            </a>
-          </div>
-            
-      </div>
-
-      <div class="container mt-4">
-        <div class="card mb-3 bg-black text-secondary">
-          <div class="row g-0">
-            <div class="col-2">
-            <img src="https://placekitten.com/100" class="img-fluid rounded-circle mt-3" alt="Card title">
+              Aimed to Kill
+            </p>
             </div>
-            <div class="col-8">
-              <div class="card-body">
-              <h6 class="card-title">Charlie Hookham</h6>
-              <p class="card-text fs-6">In Camera • Yumi Zouma</p>
-              <p class="card-text fs-6">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-vinyl" viewBox="0 0 16 16">
-                  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                  <path d="M8 6a2 2 0 1 0 0 4 2 2 0 0 0 0-4zM4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0z"/>
-                  <path d="M9 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
-                </svg>
-                EP III
-              </p>
-
-              </div>
-            </div>
-              <div class="col-2 mt-3">
-                <p class="card-text fs-6 text-end">4 ore</p>
-              </div>
           </div>
+            <div class="col-2 mt-3">
+              <p class="card-text fs-6 text-end">8 ore</p>
+            </div>
         </div>
       </div>
+    </div>
 
-      <div class="container mt-4">
-        <div class="card mb-3 bg-black text-secondary">
-          <div class="row g-0">
-            <div class="col-2">
-            <img src="https://placekitten.com/100" class="img-fluid rounded-circle mt-3" alt="Card title">
-            </div>
-            <div class="col-8">
-              <div class="card-body">
-              <h6 class="card-title">lightdark02</h6>
-              <p class="card-text fs-6">Aimed to Kill • Jade LeMac</p>
-              <p class="card-text fs-6">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-vinyl" viewBox="0 0 16 16">
-                  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                  <path d="M8 6a2 2 0 1 0 0 4 2 2 0 0 0 0-4zM4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0z"/>
-                  <path d="M9 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
-                </svg>
-                Aimed to Kill
-              </p>
-              </div>
-            </div>
-              <div class="col-2 mt-3">
-                <p class="card-text fs-6 text-end">8 ore</p>
-              </div>
+    <div class="container mt-4">
+      <div class="card mb-3 bg-black color-grey">
+        <div class="row g-0">
+          <div class="col-2">
+          <img src="https://placekitten.com/100" class="img-fluid rounded-circle mt-3" alt="Card title">
           </div>
+          <div class="col-8">
+            <div class="card-body">
+            <h6 class="card-title">Valeria Traverso</h6>
+            <p class="card-text fs-6">New Kings • Sleeping Wolf</p>
+            <p class="card-text fs-6">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-music-note-beamed" viewBox="0 0 16 16">
+                <path d="M6 13c0 1.105-1.12 2-2.5 2S1 14.105 1 13c0-1.104 1.12-2 2.5-2s2.5.896 2.5 2zm9-2c0 1.105-1.12 2-2.5 2s-2.5-.895-2.5-2 1.12-2 2.5-2 2.5.895 2.5 2z"/>
+                <path fill-rule="evenodd" d="M14 11V2h1v9h-1zM6 3v10H5V3h1z"/>
+                <path d="M5 2.905a1 1 0 0 1 .9-.995l8-.8a1 1 0 0 1 1.1.995V3L5 4V2.905z"/>
+              </svg>
+              EP III
+            </p>
+            </div>
+          </div>
+            <div class="col-2 mt-3">
+              <p class="card-text fs-6 text-end">3 giorni</p>
+            </div>
         </div>
       </div>
-
-      <div class="container mt-4">
-        <div class="card mb-3 bg-black text-secondary">
-          <div class="row g-0">
-            <div class="col-2">
-            <img src="https://placekitten.com/100" class="img-fluid rounded-circle mt-3" alt="Card title">
-            </div>
-            <div class="col-8">
-              <div class="card-body">
-              <h6 class="card-title">Valeria Traverso</h6>
-              <p class="card-text fs-6">New Kings • Sleeping Wolf</p>
-              <p class="card-text fs-6">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-music-note-beamed" viewBox="0 0 16 16">
-                  <path d="M6 13c0 1.105-1.12 2-2.5 2S1 14.105 1 13c0-1.104 1.12-2 2.5-2s2.5.896 2.5 2zm9-2c0 1.105-1.12 2-2.5 2s-2.5-.895-2.5-2 1.12-2 2.5-2 2.5.895 2.5 2z"/>
-                  <path fill-rule="evenodd" d="M14 11V2h1v9h-1zM6 3v10H5V3h1z"/>
-                  <path d="M5 2.905a1 1 0 0 1 .9-.995l8-.8a1 1 0 0 1 1.1.995V3L5 4V2.905z"/>
-                </svg>
-                EP III
-              </p>
-              </div>
-            </div>
-              <div class="col-2 mt-3">
-                <p class="card-text fs-6 text-end">3 giorni</p>
-              </div>
-          </div>
-        </div>
-        </div>
       </div>
+    </div>
       <!-- player navbar -->
       <div class="row position-fixed bottom-0 w-100 ">
         <div class="color-player col-12 p-3">
