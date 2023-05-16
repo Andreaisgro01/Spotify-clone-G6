@@ -1,3 +1,76 @@
+/* static elements */
+
 .color-17 {
   background-image: linear-gradient(#171717, #060606);
+}
+
+/* aside left */
+
+#new-playlist-svg{
+  background-color: gainsboro;
+  color: grey;
+}
+#Favourite-songs{
+  background: linear-gradient(to bottom right,#4015B7,#7A8C89);
+}
+#add-playlist{
+  background-color: lightgray;
+}
+
+/* main content */
+
+
+/* aside right */
+
+.side-icons{
+  color: #ffffff;
+}
+
+.xicon{
+  position: relative;
+  top: 2px;
+}
+
+.fs-6{
+  font-size: 13px !important;
+}
+
+/* player navbar */
+
+.row>*{
+  margin-left: 0;
+}
+.row{
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.color-player {
+  background-color: #171717;
+}
+
+.avanzamento-bg {
+  height: 5px;
+  width: 30vw;
+}
+
+.avanzamento {
+  height: 5px;
+  width: 40%;
+}
+
+.volume-bg {
+  height: 5px;
+  width: 5vw;
+}
+
+.volume {
+  height: 5px;
+  width: 90%;
+}
+
+.dot {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
 }
