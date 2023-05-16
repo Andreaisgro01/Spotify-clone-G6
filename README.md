@@ -1,1 +1,2 @@
-# Spotify-clone-G6
+# SPOTIFY CLONE (GRUPPO 6)
+- MAIN PAGE
