@@ -27,17 +27,23 @@ const search = () => {
                     <div class="card bg-transparent text-light mb-3">
                       <div class="row g-0">
                         <div class="col-md-1">
-                        <img src=${element.album.cover} class="img-fluid" alt="cover canzone">
+                        <img src=${
+                          element.album.cover
+                        } class="img-fluid" alt="cover canzone">
                         </div>
                         <div class="col-md-8">
                           <div class="card-body">
                             <h5 class="card-title">${element.title}</h5>
-                            <p class="card-text text-secondary">${element.artist.name}</p>
+                            <p class="card-text text-secondary">${
+                              element.artist.name
+                            }</p>
                           </div>
                         </div>
                         <div class="col-md-3">
                           <div class="card-body">
-                            <p class="text-secondary">${element.duration}</p>
+                            <p class="text-secondary">${Math.floor(
+                              element.duration / 60
+                            )}:${element.duration % 60}</p>
                           </div>
                         </div>
                       </div>
