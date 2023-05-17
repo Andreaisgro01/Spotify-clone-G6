@@ -13,3 +13,75 @@ heartDecoration.addEventListener("click", function () {
         />`;
     }
   });
+
+  const ALBUM_URL =  "https://striveschool-api.herokuapp.com/api/deezer/album/"
+let addressBarContent = new URLSearchParams(window.location.search)
+let albumId = addressBarContent.get('albumId')
+let appendAlbum = document.getElementById('append-album')
+
+
+
+const getAlbum = () =>{
+  fetch(ALBUM_URL + albumId)
+  
+  .then((res) => {
+    console.log('RES', res)
+    if (res.ok) {
+
+        return res.json()
+    } else {
+        throw new Error('Error album')
+    }
+})
+  .then((data)=>{
+    console.log(data)
+    appendTracks (data) 
+  })
+
+  .catch((err)=>{
+    console.log(err)
+  })
+
+}
+
+const appendTracks =  function (datatracks){
+  let tracklist = datatracks.tracks.data
+  let trackSelector = 0 
+  tracklist.forEach(track => {
+    trackSelector += 1
+    appendAlbum.innerHTML += `<div class="col-7 d-flex align-items-center"><span class="px-3 text-light">${trackSelector}</span>
+    <div>
+      <p class="text-light fw-bold mb-0">${track.title}</p>
+      <p class="mb-0">${track.artist.name}</p>
+    </div>
+  </div>
+  <div class="col-4 d-flex align-items-center">${track.rank}</div>
+  <div class="col-1 d-flex align-items-center flex-row-reverse pe-5"></div>`  
+  });
+  
+}
+
+window.onload = () => {
+  getAlbum()
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+// "album":{
+//"id":331818647,
+// "title":"Mercury - Acts 1 & 2","cover":"https://api.deezer.com/album/331818647/image","cover_small":"https://e-cdns-images.dzcdn.net/images/cover/7f7aae26b50cb046c872238b6a2a10c2/56x56-000000-80-0-0.jpg",
+// "cover_medium":"https://e-cdns-images.dzcdn.net/images/cover/7f7aae26b50cb046c872238b6a2a10c2/250x250-000000-80-0-0.jpg"
+// ,"cover_big":"https://e-cdns-images.dzcdn.net/images/cover/7f7aae26b50cb046c872238b6a2a10c2/500x500-000000-80-0-0.jpg",
+// "cover_xl":"https://e-cdns-images.dzcdn.net/images/cover/7f7aae26b50cb046c872238b6a2a10c2/1000x1000-000000-80-0-0.jpg","md5_image":"7f7aae26b50cb046c872238b6a2a10c2","tracklist":"https://api.deezer.com/album/331818647/tracks"
+// ,"type":"album"},
+// "type":"track"}
