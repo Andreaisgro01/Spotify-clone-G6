@@ -1,6 +1,5 @@
 #artistImage{
-    background-image: url(../imgs/main/image-11.jpg);
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
     width: 105%;
 }
