@@ -1,26 +1,26 @@
 const urlSite = "https://striveschool-api.herokuapp.com/api/deezer/search?q=";
 
 const search = () => {
-    let searchResult = document.getElementById("searchBar");
-    let searchValue = searchResult.value;
+  let searchResult = document.getElementById("searchBar");
+  let searchValue = searchResult.value;
 
-    fetch(urlSite + searchValue)
-        .then((res) => {
-            if (res.ok) {
-                return res.json()        
-        }else{
-            throw new Error("Errore nella fetch");
-        }
+  fetch(urlSite + searchValue)
+    .then((res) => {
+      if (res.ok) {
+        return res.json();
+      } else {
+        throw new Error("Errore nella fetch");
+      }
     })
 
-        .then((data) => {
-            console.log(data)
-            
-            let contentToFill = document.getElementById("sfogliaTutto")
-            contentToFill.innerHTML = "";
-            let songResults = data.data
-            songResults.forEach(element => {
-                let cardTemplate = `
+    .then((data) => {
+      console.log(data);
+
+      let contentToFill = document.getElementById("sfogliaTutto");
+      contentToFill.innerHTML = "";
+      let songResults = data.data;
+      songResults.forEach((element) => {
+        let cardTemplate = `
                 <div class="col-md-12 mb-4">
                 <div class="row my-1">
                   <div class="col-md-12">
@@ -45,19 +45,18 @@ const search = () => {
                   </div>
                 </div>
               </div>               
-                `
-        
-                contentToFill.innerHTML += cardTemplate;
-            }); 
+                `;
 
-
-        })
-        .catch((err) => {
-            console.log(err);
-        })    
-}
-
+        contentToFill.innerHTML += cardTemplate;
+      });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+};
 
 let barraDiRicerca = document.getElementById("searchBar");
-barraDiRicerca.addEventListener("search", search())
-
+barraDiRicerca.addEventListener("search", function (e) {
+  e.preventDefault();
+  search();
+});
