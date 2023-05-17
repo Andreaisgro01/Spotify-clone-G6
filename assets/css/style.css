@@ -42,6 +42,12 @@ body{
 #lista-salvati li {
   margin: 0.5vh 0;
 }
+.add-height-scroll{
+  height: 626px;
+}
+.add-height-main{
+  height: 100vh;
+}
 
 /* main content */
 .navbarSvg {
