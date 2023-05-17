@@ -1,25 +1,21 @@
 const urlSite = "https://striveschool-api.herokuapp.com/api/deezer/search?q=";
 
-
-
-
 const search = () => {
     let searchResult = document.getElementById("searchBar");
-    searchValue = searchResult.value;
+    let searchValue = searchResult.value;
 
     fetch(urlSite + searchValue)
         .then((res) => {
             if (res.ok) {
-                return res.json()
+                return res.json()        
         }else{
             throw new Error("Errore nella fetch");
         }
     })
+
         .then((data) => {
             console.log(data)
             
-
-
             let contentToFill = document.getElementById("sfogliaTutto")
             contentToFill.innerHTML = "";
             let songResults = data.data
@@ -50,7 +46,7 @@ const search = () => {
                 </div>
               </div>               
                 `
-
+        
                 contentToFill.innerHTML += cardTemplate;
             }); 
 
@@ -58,12 +54,10 @@ const search = () => {
         })
         .catch((err) => {
             console.log(err);
-        })
-    
-
-    
-
-    
+        })    
 }
 
+
+let barraDiRicerca = document.getElementById("searchBar");
+barraDiRicerca.addEventListener("search", search())
 
