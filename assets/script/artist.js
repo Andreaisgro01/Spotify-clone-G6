@@ -1,12 +1,14 @@
 const ARTIST_URL =  "https://striveschool-api.herokuapp.com/api/deezer/artist/"
+
+
 let addressBarContent = new URLSearchParams(window.location.search)
 let artistId = addressBarContent.get('artistId')
-let appendArtist = document.getElementById('appendArtist')
+let songTarget = document.getElementById('songTarget')
 
 
 
 
-const getArtist = () =>{
+const getArtistTrack = () =>{
   fetch(ARTIST_URL + artistId)
   
   .then((res) => {
@@ -14,13 +16,31 @@ const getArtist = () =>{
     if (res.ok) {
 
         return res.json()
+
     } else {
-        throw new Error('Error artist')
+        throw new Error('Error fetching artist')
     }
 })
   .then((data)=>{
-    console.log(data)
-    appendTracks (data) 
+    console.log("artist ", data)
+    let popularTracks = data.tracklist
+    fetch(popularTracks)
+    .then((response) => {
+        if (response.ok) {
+
+        return response.json()
+
+        } else {
+            throw new Error('Error fetching popular tracks')
+        }
+    })
+    .then((popular)=>{
+        console.log(popular)
+    })
+    .catch((errore)=>{
+        console.log(errore)
+    })
+
   })
 
   .catch((err)=>{
@@ -29,25 +49,46 @@ const getArtist = () =>{
 
 }
 
-const appendTracks =  function (datatracks){
-    appendArtist
-  tracklist.forEach(track => {
-    trackSelector += 1
-    appendAlbum.innerHTML += `<div class="col-7 d-flex align-items-center"><span class="px-3 text-light">${trackSelector}</span>
-    <div>
-      <p class="text-light fw-bold mb-0">${track.title}</p>
-      <p class="mb-0">${track.artist.name}</p>
-    </div>
-  </div>
-  <div class="col-4 d-flex align-items-center">${track.rank}</div>
-  <div class="col-1 d-flex align-items-center flex-row-reverse pe-5"></div>`  
-  });
-  
-}
 
-window.onload = () => {
-  getArtist()
-}
+getArtistTrack()
+
+
+
+
+
+
+
+
+
+
+// const appendTracks =  function (datatracks){
+//     let tracklist = datatracks.tracks.data
+//     songTarget.innerHTML = "";
+//     for (let i=1; i<=5; i++) {
+//             let content = `
+//             <div class="col-8 mt-5">
+//                 <span>${i}</span>
+//                 <img src= ${tracklist.cover} alt="foto">
+//                 <span>${tracklist.title}</span>
+//             </div>
+//             <div class="col-3">
+//                 <span>${tracklist.rank}</span>
+//             </div>
+//             <div class="col-1">
+//                 <span>${Math.floor((tracklist.duration)/60)} : ${(tracklist.duration) % 60}</span>
+//             </div>
+            
+//     `
+//     songTarget.innerHTML += content;
+//     }
+
+
+  
+// }
+
+// window.onload = () => {
+//   getArtistTrack()
+// }
 
 
 // {"id":412,"name":"Queen","link":"https://www.deezer.com/artist/412",
