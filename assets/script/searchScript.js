@@ -33,10 +33,10 @@ const search = () => {
                         </div>
                         <div class="col-md-8">
                           <div class="card-body">
-                            <h5 class="card-title">${element.title}</h5>
-                            <p class="card-text text-secondary">${
+                            <h5 class="card-title"><a class="text-decoration-none" href="album.html?albumId=${element.album.id}">${element.title}</a></h5>
+                            <p class="card-text text-secondary"><a class="text-decoration-none" href="artist.html?artistId=${element.artist.id}">${
                               element.artist.name
-                            }</p>
+                            }</a></p>
                           </div>
                         </div>
                         <div class="col-md-3">
