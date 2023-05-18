@@ -48,13 +48,13 @@ const getAlbum = () =>{
 
 const appendCover = function(datacover){
   let coverlist= datacover.tracks.data
-    albumCover.innerHTML = `<div class="card color-17 text-light d-flex mt-3 bt-0" >
-    <div class="row g-0">
-      <div class="col-md-4 mt-5 ">
+    albumCover.innerHTML = `<div class="card color-17 text-light d-flex mt-3 bt-0"> 
+    <div class="row "> 
+      <div class="col-md-3 mt-5 mb-3 ">
         <img src="${datacover.cover_xl}" class="img-fluid rounded-start ms-5 mb-2" height="230" width="230" alt="...">
       </div>
-      <div class="col-md-8 mt-5">
-        <div class="card-body ms-0 me-5">
+      <div id="current-album" class="col-md-9 mt-5">
+        <div class="card-body ms-0 ps-0 ">
         <p class="card-text fw-bold" >ALBUM</p>
         <h5 class="card-title display-3 fw-bold ">${datacover.title}</h5>
         <div class="d-flex">
