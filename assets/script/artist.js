@@ -16,7 +16,7 @@ const getArtistTrack = () => {
     })
     .then((data) => {
       fillHeader(data);
-      console.log("artist", data);
+      console.log("artist ", data);
       let popularTracks = data.tracklist;
       fetch(popularTracks)
         .then((response) => {
@@ -26,30 +26,17 @@ const getArtistTrack = () => {
             throw new Error("Error fetching popular tracks");
           }
         })
-        .then((data) => {
-          fillHeader(data);
-          console.log("artist ", data);
-          let popularTracks = data.tracklist;
-          fetch(popularTracks)
-            .then((response) => {
-              if (response.ok) {
-                return response.json();
-              } else {
-                throw new Error("Error fetching popular tracks");
-              }
-            })
-            .then((popular) => {
-              popularFill(popular);
-              console.log(popular);
-            })
-            .catch((errore) => {
-              console.log(errore);
-            });
+        .then((popular) => {
+          popularFill(popular);
+          console.log(popular);
         })
-
-        .catch((err) => {
-          console.log(err);
+        .catch((errore) => {
+          console.log(errore);
         });
+    })
+
+    .catch((err) => {
+      console.log(err);
     });
 };
 
