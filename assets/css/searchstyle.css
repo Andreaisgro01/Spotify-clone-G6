@@ -50,3 +50,12 @@
 .dimensions{
     height: 160px;
 }
+.search-hover:hover{
+    background-color: #171717;
+}
+.add-height-search{
+    height: 45vh;
+}
+#mainSearch{
+    margin-bottom: 8vh;
+}

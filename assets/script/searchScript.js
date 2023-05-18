@@ -22,19 +22,19 @@ const search = () => {
       songResults.forEach((element) => {
         let cardTemplate = `
                 <div class="col-md-12 mb-4">
-                <div class="row my-1">
+                <div class="row my-1 search-hover">
                   <div class="col-md-12">
-                    <div class="card bg-transparent text-light mb-3">
+                    <div class="card bg-transparent text-light mb-3 border-0">
                       <div class="row g-0">
                         <div class="col-md-1">
-                        <img src=${
+                        <a class="text-decoration-none" href="album.html?albumId=${element.album.id}"><img src=${
                           element.album.cover
-                        } class="img-fluid" alt="cover canzone">
+                        } class="img-fluid rounded-1 ms-2 mt-3" alt="cover canzone"></a>
                         </div>
                         <div class="col-md-8">
                           <div class="card-body">
-                            <h5 class="card-title"><a class="text-decoration-none" href="album.html?albumId=${element.album.id}">${element.title}</a></h5>
-                            <p class="card-text text-secondary"><a class="text-decoration-none" href="artist.html?artistId=${element.artist.id}">${
+                            <h5 class="card-title"><a class="text-decoration-none text-light" href="album.html?albumId=${element.album.id}">${element.title}</a></h5>
+                            <p class="card-text text-secondary"><a class="text-decoration-none text-light underline-me" href="artist.html?artistId=${element.artist.id}">${
                               element.artist.name
                             }</a></p>
                           </div>

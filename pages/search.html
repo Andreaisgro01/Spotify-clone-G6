@@ -22,7 +22,7 @@
     <div class="container-fluid h-100">
       <div class="row h-100">
       <!-- aside left :)-->
-      <div class="col-3 bg-black"> 
+      <div class="col-3 bg-black mb-5"> 
         <!-- primi 4 bottoni -->
         <div class="buttons-container mt-4">    
           <div>
@@ -47,7 +47,7 @@
           </div>
       </div> 
       <!-- creo le playlists -->
-      <div class="playlist-container mt-5 ps-2 border-bottom border-secondary">
+      <div class="playlist-container mt-3 ps-2 border-bottom border-secondary">
           <div>
           <button id="add-playlist" type="button color-grey" class="btn text-light px-2 mb-2 border-0"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
               <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
@@ -142,7 +142,7 @@
         
       </div>
       <!-- Main content -->
-        <div class="color-17 col-7 overflow-scroll add-height-main">
+        <div class="color-17 col-7 overflow-scroll" id="mainSearch">
           <nav class="d-flex py-2">
             <div
               class="me-auto d-flex justify-content-center align-items-center p-1"
@@ -177,7 +177,7 @@
                   />
                 </svg>
               </a>
-              
+                <!-- BARRA DI RICERCA -->
                 <input class="form-control rounded-pill me-2 enlarge" id="searchBar" type="search" placeholder="Cerca artisti, canzoni o podcast" aria-label="Search" >
 
               
@@ -215,8 +215,8 @@
           </nav>
            
           
-          <div class="row" id="sfogliaTutto">
-              <div class="col-12 my-4  text-light">
+          <div class="row add-height-search" id="sfogliaTutto">
+              <div class="col-12 my-4 text-light">
                 <span class="h3">Sfoglia tutto</span>
                 <div class="row mt-5">
 
