@@ -36,9 +36,9 @@
           </svg> <span class="ms-4 fw-bold color-grey">Home</span></button></a>
           </div>
           <div>
-          <button type="button" class="btn color-grey"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+            <a href="search.html"><button type="button" class="btn color-grey"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
               <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-          </svg><span class="ms-4 fw-bold color-grey">Cerca </span></button>
+          </svg><span class="ms-4 fw-bold color-grey">Cerca </span></button></a>
           </div>
           <div>
           <button type="button" class="btn color-grey"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor " class="bi bi-collection" viewBox="0 0 16 16">
@@ -180,7 +180,7 @@
             <div class="row pt-5" id="artistImage" >
                 
               <!-- Top -->
-              <div class="col-12 d-flex flex-column text-light pt-5">
+              <div class="col-12 d-flex flex-column text-light pt-5" id="artistaHead">
                 <p class="pt-5 mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#3E91F4" class="bi bi-patch-check-fill" viewBox="0 0 16 16">
                   <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708z"/>
                 </svg> Artista Verificato</p>
@@ -223,7 +223,7 @@
 
             <div class="row mt-5 text-light">
                   <!-- buongiorno -->
-                  <div class="col-7 mx-4 ">
+                  <div class="col-md-7 px-4 ">
                     <span class="sottotitoli">Popolari</span> 
 
                     <div class="row align-items-baseline" id="songTarget">
@@ -238,13 +238,13 @@
                         <div class="col-1">
                             <span>LENGHT</span>
                         </div>
-                        <a href="#" class="btn text-secondary text-start mt-2 fw-bold">VISUALIZZA ALTRO</a>
-                    </div>
+                      </div>
+                      <a href="#" class="btn text-secondary text-start mt-2 fw-bold">VISUALIZZA ALTRO</a>
 
 
                   </div>
                   <!-- cards container -->
-                  <div class="col-4 ms-5 ">
+                  <div class="col-md-4 ps-5 ">
                     <span class="sottotitoli">Brani che ti piacciono</span>
                     <div class="card bg-transparent text-light mt-2">
                         <div class="row g-0">
@@ -585,6 +585,7 @@
         </div>
       </div>
     </div>
+    <script src="../assets/script/artist.js"></script>
 
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
