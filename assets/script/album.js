@@ -48,18 +48,18 @@ const getAlbum = () =>{
 
 const appendCover = function(datacover){
   let coverlist= datacover.tracks.data
-    albumCover.innerHTML = `<div class="card mt-5 color-17 text-light"  style="max-width: 540px;">
+    albumCover.innerHTML = `<div class="card color-17 text-light d-flex mt-3 bt-0" >
     <div class="row g-0">
-      <div class="col-md-4">
-        <img src="${datacover.cover_xl}" class="img-fluid rounded-start mt-5 " alt="...">
+      <div class="col-md-4 mt-5 ">
+        <img src="${datacover.cover_xl}" class="img-fluid rounded-start ms-5 mb-2" height="230" width="230" alt="...">
       </div>
-      <div class="col-md-8">
-        <div class="card-body">
-          <h2 class="card-title">${datacover.artist.name}</h2>
-          <p class="card-text">${datacover.title}</p>
-          <div class="d-flex">
-          <img src="${datacover.artist.picture_small}" class= "rounded-circle" height="30">
-          <p class="card-text">${datacover.artist.name}•${datacover.release_date}</p>
+      <div class="col-md-8 mt-5">
+        <div class="card-body ms-0 me-5">
+        <p class="card-text fw-bold" >ALBUM</p>
+        <h5 class="card-title display-3 fw-bold ">${datacover.title}</h5>
+        <div class="d-flex">
+          <img src="${datacover.artist.picture_small}" class= "rounded-circle" height="40">
+          <p class="card-text ms-2 mt-2"><span class="fw-bold">${datacover.artist.name}</span>•${datacover.release_date.slice(0,4)}•${datacover.tracks.data.length} brani•${Math.floor(datacover.duration/60)} min ${datacover.duration %60} sec</p>
           <p class="card-text"></p>
           </div>
         </div>
