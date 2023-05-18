@@ -18,6 +18,7 @@ heartDecoration.addEventListener("click", function () {
 let addressBarContent = new URLSearchParams(window.location.search)
 let albumId = addressBarContent.get('albumId')
 let appendAlbum = document.getElementById('append-album')
+let albumCover = document.getElementById('album-cover')
 
 
 
@@ -36,6 +37,7 @@ const getAlbum = () =>{
   .then((data)=>{
     console.log(data)
     appendTracks (data) 
+    appendCover (data)
   })
 
   .catch((err)=>{
@@ -43,6 +45,32 @@ const getAlbum = () =>{
   })
 
 }
+
+const appendCover = function(datacover){
+  let coverlist= datacover.tracks.data
+    albumCover.innerHTML = `<div class="card color-17 text-light d-flex mt-3 bt-0" >
+    <div class="row g-0">
+      <div class="col-md-4 mt-5 ">
+        <img src="${datacover.cover_xl}" class="img-fluid rounded-start ms-5 mb-2" height="230" width="230" alt="...">
+      </div>
+      <div class="col-md-8 mt-5">
+        <div class="card-body ms-0 me-5">
+        <p class="card-text fw-bold" >ALBUM</p>
+        <h5 class="card-title display-3 fw-bold ">${datacover.title}</h5>
+        <div class="d-flex">
+          <img src="${datacover.artist.picture_small}" class= "rounded-circle" height="40">
+          <p class="card-text ms-2 mt-2"><span class="fw-bold">${datacover.artist.name}</span>•${datacover.release_date.slice(0,4)}•${datacover.tracks.data.length} brani•${Math.floor(datacover.duration/60)} min ${datacover.duration %60} sec</p>
+          <p class="card-text"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>`
+  
+}
+
+
+
 
 const appendTracks =  function (datatracks){
   let tracklist = datatracks.tracks.data
@@ -56,7 +84,7 @@ const appendTracks =  function (datatracks){
     </div>
   </div>
   <div class="col-4 d-flex align-items-center">${track.rank}</div>
-  <div class="col-1 d-flex align-items-center flex-row-reverse pe-5"></div>`  
+  <div class="col-1 d-flex align-items-center flex-row-reverse pe-5">${Math.floor((track.duration)/60)}:${(track.duration) % 60}</div>`  
   });
   
 }
