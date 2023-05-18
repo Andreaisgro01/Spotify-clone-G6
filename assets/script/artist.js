@@ -23,7 +23,7 @@ const getArtistTrack = () =>{
 })
   .then((data)=>{
     fillHeader(data)
-    console.log("artist ", data)
+    console.log("artist", data)
     let popularTracks = data.tracklist
     fetch(popularTracks)
     .then((response) => {

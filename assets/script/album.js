@@ -18,6 +18,7 @@ heartDecoration.addEventListener("click", function () {
 let addressBarContent = new URLSearchParams(window.location.search)
 let albumId = addressBarContent.get('albumId')
 let appendAlbum = document.getElementById('append-album')
+let albumCover = document.getElementById('album-cover')
 
 
 
@@ -36,6 +37,7 @@ const getAlbum = () =>{
   .then((data)=>{
     console.log(data)
     appendTracks (data) 
+    appendCover (data)
   })
 
   .catch((err)=>{
@@ -43,6 +45,32 @@ const getAlbum = () =>{
   })
 
 }
+
+const appendCover = function(datacover){
+  let coverlist= datacover.tracks.data
+    albumCover.innerHTML = `<div class="card mt-5 color-17 text-light"  style="max-width: 540px;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="${datacover.cover_xl}" class="img-fluid rounded-start mt-5 " alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h2 class="card-title">${datacover.artist.name}</h2>
+          <p class="card-text">${datacover.title}</p>
+          <div class="d-flex">
+          <img src="${datacover.artist.picture_small}" class= "rounded-circle" height="30">
+          <p class="card-text">${datacover.artist.name}•${datacover.release_date}</p>
+          <p class="card-text"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>`
+  
+}
+
+
+
 
 const appendTracks =  function (datatracks){
   let tracklist = datatracks.tracks.data
@@ -56,7 +84,7 @@ const appendTracks =  function (datatracks){
     </div>
   </div>
   <div class="col-4 d-flex align-items-center">${track.rank}</div>
-  <div class="col-1 d-flex align-items-center flex-row-reverse pe-5"></div>`  
+  <div class="col-1 d-flex align-items-center flex-row-reverse pe-5">${Math.floor((track.duration)/60)}:${(track.duration) % 60}</div>`  
   });
   
 }
