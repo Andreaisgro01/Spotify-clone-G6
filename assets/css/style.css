@@ -22,6 +22,7 @@ body {
 
 .color-17 {
   background-image: linear-gradient(#171717, #060606);
+  border: 0;
 }
 .color-grey {
   color: #b2b2b2;
@@ -43,11 +44,8 @@ body {
   margin: 0.5vh 0;
 }
 .add-height-scroll {
-  height: 43vh;
+  height: 60vh;
 }
-/* .add-height-main {
-  height: 100vh;
-} */
 
 .add-height {
   height: 45vh;

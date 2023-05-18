@@ -51,11 +51,12 @@
     height: 160px;
 }
 .search-hover:hover{
-    background-color: #171717;
+    background-color: #202020 !important;
 }
+.search-hover:hover svg{
+    fill: currentColor !important;
+}
+
 .add-height-search{
     height: 45vh;
-}
-#mainSearch{
-    margin-bottom: 8vh;
 }
