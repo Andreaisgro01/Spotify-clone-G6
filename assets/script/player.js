@@ -49,3 +49,23 @@ playerPlay.addEventListener("click", () => {
   />`;
   }
 });
+
+//buongiorno/buonasera
+
+function times() {
+  var currentHour = new Date().getHours();
+  let word;
+
+  if (currentHour < 18) {
+    word = "Buongiorno";
+  } else {
+    word = "Buonasera";
+  }
+  return word;
+}
+
+
+let answer = document.getElementById("goodmorning");
+
+answer.textContent = times();
+
