@@ -6,34 +6,17 @@ let songTarget = document.getElementById("songTarget");
 
 const getArtistTrack = () => {
   fetch(ARTIST_URL + artistId)
-  
-  .then((res) => {
-    console.log('RES', res)
-    if (res.ok) {
-
-        return res.json()
-
-    } else {
-        throw new Error('Error fetching artist')
-    }
-})
-  .then((data)=>{
-    fillHeader(data)
-    console.log("artist", data)
-    let popularTracks = data.tracklist
-    fetch(popularTracks)
-    .then((response) => {
-        if (response.ok) {
-
-        return response.json()
-
-        } else {
-            throw new Error('Error fetching popular tracks')
-        }
+    .then((res) => {
+      console.log("RES", res);
+      if (res.ok) {
+        return res.json();
+      } else {
+        throw new Error("Error fetching artist");
+      }
     })
     .then((data) => {
       fillHeader(data);
-      console.log("artist ", data);
+      console.log("artist", data);
       let popularTracks = data.tracklist;
       fetch(popularTracks)
         .then((response) => {
@@ -43,17 +26,30 @@ const getArtistTrack = () => {
             throw new Error("Error fetching popular tracks");
           }
         })
-        .then((popular) => {
-          popularFill(popular);
-          console.log(popular);
+        .then((data) => {
+          fillHeader(data);
+          console.log("artist ", data);
+          let popularTracks = data.tracklist;
+          fetch(popularTracks)
+            .then((response) => {
+              if (response.ok) {
+                return response.json();
+              } else {
+                throw new Error("Error fetching popular tracks");
+              }
+            })
+            .then((popular) => {
+              popularFill(popular);
+              console.log(popular);
+            })
+            .catch((errore) => {
+              console.log(errore);
+            });
         })
-        .catch((errore) => {
-          console.log(errore);
-        });
-    })
 
-    .catch((err) => {
-      console.log(err);
+        .catch((err) => {
+          console.log(err);
+        });
     });
 };
 
@@ -156,5 +152,3 @@ getArtistTrack();
 // window.onload = () => {
 //   getArtistTrack()
 // }
-
-
