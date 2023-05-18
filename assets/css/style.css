@@ -50,7 +50,11 @@ body {
 .add-height {
   height: 45vh;
 }
-
+/* album */
+#current-album{
+  position: relative;
+  left: 30px;
+}
 /* main content */
 .navbarSvg {
   background-color: black;
