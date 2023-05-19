@@ -82,7 +82,9 @@ const appendTracks = function (datatracks) {
     appendAlbum.innerHTML += `<div class="col-7 d-flex align-items-center"><span class="px-3 text-light">${trackSelector}</span>
     <div>
       <p class="text-light fw-bold mb-0">${track.title}</p>
-      <p class="mb-0">${track.artist.name}</p>
+      <p class="mb-0"><a class="text-decoration-none text-secondary underline-me" href="artist.html?artistId=${
+        track.artist.id
+      }">${track.artist.name}</a></p>
     </div>
   </div>
   <div class="col-4 d-flex align-items-center">${track.rank}</div>
@@ -93,7 +95,6 @@ const appendTracks = function (datatracks) {
 };
 
 const playtracks = function (track) {
-  let i = 0;
   let playButton = document.getElementById("play-button");
   playButton.addEventListener("click", function () {
     let audioTrack = new Audio(track.tracks.data[0].preview);

@@ -29,6 +29,7 @@ const getArtistTrack = () => {
         .then((popular) => {
           popularFill(popular);
           console.log(popular);
+          playtracks(popular);
         })
         .catch((errore) => {
           console.log(errore);
@@ -108,6 +109,47 @@ const popularFill = (popular) => {
     }</span>
         </div>    
         `;
+  });
+};
+
+const playtracks = function (track) {
+  let playButton = document.getElementById("play-button");
+  playButton.addEventListener("click", function () {
+    let audioTrack = new Audio(track.data[0].preview);
+    audioTrack.play();
+    let playerPlay = document.getElementById("player-play");
+    playerPlay.classList.remove("bi-play-circle-fill");
+    playerPlay.classList.add("bi-pause-circle-fill");
+    playerPlay.innerHTML = `<path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM6.25 5C5.56 5 5 5.56 5 6.25v3.5a1.25 1.25 0 1 0 2.5 0v-3.5C7.5 5.56 6.94 5 6.25 5zm3.5 0c-.69 0-1.25.56-1.25 1.25v3.5a1.25 1.25 0 1 0 2.5 0v-3.5C11 5.56 10.44 5 9.75 5z"/>`;
+    playerPlay.addEventListener("click", function () {
+      if (playerPlay.classList.contains("bi-pause-circle-fill")) {
+        playerPlay.classList.add("bi-play-circle-fill");
+        playerPlay.classList.remove("bi-pause-circle-fill");
+        playerPlay.innerHTML = `<path
+        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814l-3.5-2.5z"
+        />`;
+        audioTrack.pause();
+      } else {
+        playerPlay.classList.remove("bi-play-circle-fill");
+        playerPlay.classList.add("bi-pause-circle-fill");
+        playerPlay.innerHTML = `<path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM6.25 5C5.56 5 5 5.56 5 6.25v3.5a1.25 1.25 0 1 0 2.5 0v-3.5C7.5 5.56 6.94 5 6.25 5zm3.5 0c-.69 0-1.25.56-1.25 1.25v3.5a1.25 1.25 0 1 0 2.5 0v-3.5C11 5.56 10.44 5 9.75 5z"/>`;
+        audioTrack.play();
+      }
+    });
+    let playerImg = document.getElementById("player-img");
+    playerImg.src = track.cover_small;
+    let playerTitle = document.getElementById("player-title");
+    playerTitle.textContent = track.data[0].title_short;
+    let playerGroup = document.getElementById("player-group");
+    playerGroup.textContent = track.data[0].artist.name;
+    let timeStart = document.getElementById("time-start");
+    timeStart.textContent = "0:00";
+    let timeEnd = document.getElementById("time-end");
+    timeEnd.textContent = `${Math.floor(track.data[0].duration / 60)}:${
+      track.data[0].duration % 60
+    }`;
+    let playerBar = document.getElementById("player-bar");
+    playerBar.classList.remove("avanzamento");
   });
 };
 
