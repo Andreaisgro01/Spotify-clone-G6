@@ -99,6 +99,7 @@ h2 {
   margin-left: 0;
 }
 .row {
+  z-index: 5;
   padding-left: 0;
   padding-right: 0;
 }
