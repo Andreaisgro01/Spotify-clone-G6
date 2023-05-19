@@ -54,6 +54,9 @@ body {
   position: relative;
   left: 30px;
 }
+.album-cover{
+  width: 105%;
+}
 /* main content */
 .navbarSvg {
   background-color: black;

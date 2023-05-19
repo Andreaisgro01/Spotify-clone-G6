@@ -44,7 +44,7 @@ const getAlbum = () => {
 
 const appendCover = function (datacover) {
   albumCover.innerHTML = `<div class="album-cover text-light d-flex mt-3 bt-0"> 
-    <div class="row "> 
+    <div class="row"> 
       <div class="col-md-3 mt-5 mb-3 ">
         <img id="img" src="${
           datacover.cover_xl
@@ -86,8 +86,8 @@ const appendTracks = function (datatracks) {
       }">${track.artist.name}</a></p>
     </div>
   </div>
-  <div class="col-4 d-flex align-items-center">${track.rank}</div>
-  <div class="col-1 d-flex align-items-center flex-row-reverse pe-5">${Math.floor(
+  <div class=" col-4 d-flex align-items-center">${track.rank}</div>
+  <div class="col-1 d-flex align-items-center flex-row-reverse pe-1">${Math.floor(
     track.duration / 60
   )}:${track.duration % 60}</div>`;
   });
