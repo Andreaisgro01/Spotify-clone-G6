@@ -16,6 +16,14 @@
     />
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="stylesheet" href="./assets/css/circular-font.css">
+    <style>
+      .color-green{
+        color: #1fdf64;
+      }
+      .light-shadow{
+        box-shadow: 0px 0px 10px rgba(256, 256, 256, 0.3);
+      }
+    </style>
   </head>
 
   <body class="h-100">
@@ -142,19 +150,21 @@
         
       </div>
       <!-- Main content -->
-        <div class="color-17 col-12 col-lg-8 col-xl-7 mb-0 mb-lg-5 overflow-scroll add-height-main">
-          <nav class="d-flex py-2 px-2 position-fixed top-0 mr-3 ">
+        <div class="color-17 col-12 col-lg-8 col-xl-7 mb-0 mb-lg-5  overflow-scroll add-height-main">
+          <nav class="d-none d-lg-flex row p-2 ps-3 pe-0 position-fixed top-0">
+            <!-- freccette -->
             <div
-              class="me-auto d-flex justify-content-center align-items-center p-1"
+              class=" col-8 me-auto d-flex align-items-center p-1"
             >
+            <!-- avanti -->
             <div>
-              <a href="#" class="navbarSvg ps-1 pe-2 pb-1 pt-0 text-center fs-3">
+              <a href="#" class="bg-black rounded-circle p-2 pt-1">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
                   height="16"
                   fill="currentColor"
-                  class="bi bi-chevron-left text-light m-2"
+                  class="bi bi-chevron-left text-light"
                   viewBox="0 0 16 16"
                 >
                   <path
@@ -164,14 +174,15 @@
                 </svg>
               </a>
             </div>
-            <div>
-              <a href="#" class="navbarSvg ps-2 pe-1 pb-1 pt-0 text-center fs-3">
+            <!-- indietro -->
+            <div class="ms-2">
+              <a href="#" class="bg-black rounded-circle p-2 pt-1">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
                   height="16"
                   fill="currentColor"
-                  class="bi bi-chevron-right text-white m-2"
+                  class="bi bi-chevron-right text-white"
                   viewBox="0 0 16 16"
                 >
                   <path
@@ -183,26 +194,29 @@
             </div>
             </div>
 
+            <!-- profile -->
             <div
-              class="d-flex justify-content-center align-items-center bg-black rounded-pill"
+              class="col-4 d-flex flex-row-reverse justify-content-between align-items-center px-0"
             >
-              <a href="#" class="ms-1">
-                <img
-                  src="assets/imgs/main/image-15.jpg"
-                  class="profileLogo"
-                  alt="profileLogo"
-                />
-              </a>
+              
               <div
-                class="dropdown d-flex justify-content-center align-items-center d-inline"
+                class="dropdown d-flex justify-content-center align-items-center bg-black rounded-pill py-1"
               >
                 <a
-                  class="btn btn-balck text-light dropdown-toggle"
+                  class="dropdown-toggle text-decoration-none text-light px-2"
                   href="#"
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
+        
+                  <img
+                    src="assets/imgs/main/image-15.jpg"
+                    class="rounded-circle"
+                    alt="profileLogo"
+                    height="28"
+                  />
+                
                   Maccio Capatonda
                 </a>
 
@@ -266,27 +280,30 @@
               <div class="add-height">
               <div class="col-12 p-3">
                 <div class="row">
-                  <div class="col-12 h3 text-light mb-3">
+                  <div class="col-12 text-light mb-3">
                     <div class="row">
-                      <div id="goodmorning" class="col">
+                      <div id="goodmorning" class="col h1">
                         
                       </div>
-                      <div class="col text-end">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#ffffff" class="bi bi-bell" viewBox="0 0 16 16">
+                      <div class="col d-inline d-lg-none text-end mt-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#ffffff" class="bi bi-bell ms-2" viewBox="0 0 16 16">
                           <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z"/>
                         </svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#ffffff" class="bi bi-clock-history" viewBox="0 0 16 16">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#ffffff" class="bi bi-clock-history ms-2" viewBox="0 0 16 16">
                           <path d="M8.515 1.019A7 7 0 0 0 8 1V0a8 8 0 0 1 .589.022l-.074.997zm2.004.45a7.003 7.003 0 0 0-.985-.299l.219-.976c.383.086.76.2 1.126.342l-.36.933zm1.37.71a7.01 7.01 0 0 0-.439-.27l.493-.87a8.025 8.025 0 0 1 .979.654l-.615.789a6.996 6.996 0 0 0-.418-.302zm1.834 1.79a6.99 6.99 0 0 0-.653-.796l.724-.69c.27.285.52.59.747.91l-.818.576zm.744 1.352a7.08 7.08 0 0 0-.214-.468l.893-.45a7.976 7.976 0 0 1 .45 1.088l-.95.313a7.023 7.023 0 0 0-.179-.483zm.53 2.507a6.991 6.991 0 0 0-.1-1.025l.985-.17c.067.386.106.778.116 1.17l-1 .025zm-.131 1.538c.033-.17.06-.339.081-.51l.993.123a7.957 7.957 0 0 1-.23 1.155l-.964-.267c.046-.165.086-.332.12-.501zm-.952 2.379c.184-.29.346-.594.486-.908l.914.405c-.16.36-.345.706-.555 1.038l-.845-.535zm-.964 1.205c.122-.122.239-.248.35-.378l.758.653a8.073 8.073 0 0 1-.401.432l-.707-.707z"/>
                           <path d="M8 1a7 7 0 1 0 4.95 11.95l.707.707A8.001 8.001 0 1 1 8 0v1z"/>
                           <path d="M7.5 3a.5.5 0 0 1 .5.5v5.21l3.248 1.856a.5.5 0 0 1-.496.868l-3.5-2A.5.5 0 0 1 7 9V3.5a.5.5 0 0 1 .5-.5z"/>
                         </svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#ffffff" class="bi bi-gear" viewBox="0 0 16 16">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#ffffff" class="bi bi-gear ms-2" viewBox="0 0 16 16">
                           <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z"/>
                           <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115l.094-.319z"/>
                         </svg>
                       </div>
                     </div>
-                     
+                  </div>
+                  <div class="col-12 d-block d-lg-none pb-5 pt-3">
+                    <p class="h5 mx-2 d-inline text-light">Musica</p>
+                    <p class="h5 ms-2 d-inline text-light">Podcast e show</p>
                   </div>
                   <div class="col-6 col-xl-4 mb-3">
                     <div class="d-flex color-player align-items-center rounded-2">
@@ -327,9 +344,9 @@
                 </div>
               </div>
               <!-- cards container -->
-              <div class="col-12 mb-5">
+              <div class="d-none d-lg-block col-12 mb-5">
                 <div class="row justify-content-between w-100 m-0 p-0">
-                  <div class="col-12 h4 text-light mb-3">Altro di cio che ti piace</div>
+                  <div class="col-12 d-none d-lg-block h4 text-light mb-3">Altro di cio che ti piace</div>
                   <div  class="col-12 col-md-5 col-xl-3 mb-5 p-1">
                     <div class="card text-start color-player p-2 h-100">
                       <img class="card-img-top rounded-2" src="assets/imgs/main/image-2.jpg" alt="img2">
@@ -437,6 +454,257 @@
                         <p class="card-text text-secondary"><small>Musica per stonati</small></p>
                       </div>
                     </div>
+                  </div>
+                </div>
+              </div>
+              <!-- playlist container -->
+              <div class="d-block d-lg-none col-12">
+                <div class="row">
+                  <div class="col-12 p-3 pb-5">
+
+                    <div class="row color-player rounded-3 p-3 mb-5">
+                      <div class="col-6">
+                        <img src="assets/imgs/search/image-11.jpg" class="w-100 light-shadow" alt="">
+                      </div>
+                      <div class="col-6">
+                        <p class="color-grey mb-1">Playlist</p>
+                        <div class="fw-bold fs-4 text-light">Songs to Sing in the Car</div>
+                        <p class="color-grey">Le migliori canzoni da cantare on the road!</p>
+                      </div>
+                      <div class="col-12 mt-4">
+                        <div class="row">
+                          <div class="col-6 d-flex align-items-center">
+                            <!-- heart -->
+                            <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="25"
+                            height="25"
+                            fill="currentColor"
+                            class="bi bi-heart-fill color-green"
+                            viewBox="0 0 16 16"
+                            id="player-heart"
+                          >
+                          <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                          </svg>
+                          <!-- menu -->
+                          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-three-dots-vertical color-grey ms-4" viewBox="0 0 16 16">
+                            <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+                          </svg>
+                        </div>
+                          <div class="col-6 d-flex flex-row-reverse align-items-center">
+                            <div class="d-inline">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="white" class="bi bi-play-circle-fill ms-3" viewBox="0 0 16 16">
+                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814l-3.5-2.5z"/>
+                              </svg>
+                            </div>
+                            <p class="color-grey d-inline mb-0">16 brani</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row color-player rounded-3 p-3 mb-5">
+                      <div class="col-6">
+                        <img src="assets/imgs/search/image-45.png" class="w-100 light-shadow" alt="">
+                      </div>
+                      <div class="col-6">
+                        <p class="color-grey mb-1">Playlist</p>
+                        <div class="fw-bold fs-4 text-light">Daily Driver</div>
+                        <p class="color-grey">Le canzoni per partire al Meglio</p>
+                      </div>
+                      <div class="col-12 mt-4">
+                        <div class="row">
+                          <div class="col-6 d-flex align-items-center">
+                            <!-- heart -->
+                            <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="25"
+                            height="25"
+                            fill="currentColor"
+                            class="bi bi-heart-fill color-green"
+                            viewBox="0 0 16 16"
+                            id="player-heart"
+                          >
+                          <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                          </svg>
+                          <!-- menu -->
+                          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-three-dots-vertical color-grey ms-4" viewBox="0 0 16 16">
+                            <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+                          </svg>
+                        </div>
+                          <div class="col-6 d-flex flex-row-reverse align-items-center">
+                            <div class="d-inline">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="white" class="bi bi-play-circle-fill ms-3" viewBox="0 0 16 16">
+                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814l-3.5-2.5z"/>
+                              </svg>
+                            </div>
+                            <p class="color-grey d-inline mb-0">45 brani</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row color-player rounded-3 p-3 mb-5">
+                      <div class="col-6">
+                        <img src="assets/imgs/search/image-52.jpg" class="w-100 light-shadow" alt="">
+                      </div>
+                      <div class="col-6">
+                        <p class="color-grey mb-1">Playlist</p>
+                        <div class="fw-bold fs-4 text-light">Top Gaming Tracks</div>
+                      </div>
+                      <div class="col-12 mt-4">
+                        <div class="row">
+                          <div class="col-6 d-flex align-items-center">
+                            <!-- heart -->
+                            <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="25"
+                            height="25"
+                            fill="currentColor"
+                            class="bi bi-heart-fill color-green"
+                            viewBox="0 0 16 16"
+                            id="player-heart"
+                          >
+                          <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                          </svg>
+                          <!-- menu -->
+                          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-three-dots-vertical color-grey ms-4" viewBox="0 0 16 16">
+                            <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+                          </svg>
+                        </div>
+                          <div class="col-6 d-flex flex-row-reverse align-items-center">
+                            <div class="d-inline">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="white" class="bi bi-play-circle-fill ms-3" viewBox="0 0 16 16">
+                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814l-3.5-2.5z"/>
+                              </svg>
+                            </div>
+                            <p class="color-grey d-inline mb-0">30 brani</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row color-player rounded-3 p-3 mb-5">
+                      <div class="col-6">
+                        <img src="assets/imgs/search/image-29.jpg" class="w-100 light-shadow" alt="">
+                      </div>
+                      <div class="col-6">
+                        <p class="color-grey mb-1">Playlist</p>
+                        <div class="fw-bold fs-4 text-light">Classic Essentials</div>
+                      </div>
+                      <div class="col-12 mt-4">
+                        <div class="row">
+                          <div class="col-6 d-flex align-items-center">
+                            <!-- heart -->
+                            <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="25"
+                            height="25"
+                            fill="currentColor"
+                            class="bi bi-heart-fill color-green"
+                            viewBox="0 0 16 16"
+                            id="player-heart"
+                          >
+                          <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                          </svg>
+                          <!-- menu -->
+                          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-three-dots-vertical color-grey ms-4" viewBox="0 0 16 16">
+                            <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+                          </svg>
+                        </div>
+                          <div class="col-6 d-flex flex-row-reverse align-items-center">
+                            <div class="d-inline">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="white" class="bi bi-play-circle-fill ms-3" viewBox="0 0 16 16">
+                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814l-3.5-2.5z"/>
+                              </svg>
+                            </div>
+                            <p class="color-grey d-inline mb-0">20 brani</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row color-player rounded-3 p-3 mb-5">
+                      <div class="col-6">
+                        <img src="assets/imgs/search/image-32.jpg" class="w-100 light-shadow" alt="">
+                      </div>
+                      <div class="col-6">
+                        <p class="color-grey mb-1">Album</p>
+                        <div class="fw-bold fs-4 text-light">No-Funk</div>
+                      </div>
+                      <div class="col-12 mt-4">
+                        <div class="row">
+                          <div class="col-6 d-flex align-items-center">
+                            <!-- heart -->
+                            <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="25"
+                            height="25"
+                            fill="currentColor"
+                            class="bi bi-heart-fill color-green"
+                            viewBox="0 0 16 16"
+                            id="player-heart"
+                          >
+                          <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                          </svg>
+                          <!-- menu -->
+                          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-three-dots-vertical color-grey ms-4" viewBox="0 0 16 16">
+                            <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+                          </svg>
+                        </div>
+                          <div class="col-6 d-flex flex-row-reverse align-items-center">
+                            <div class="d-inline">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="white" class="bi bi-play-circle-fill ms-3" viewBox="0 0 16 16">
+                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814l-3.5-2.5z"/>
+                              </svg>
+                            </div>
+                            <p class="color-grey d-inline mb-0">16 brani</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row color-player rounded-3 p-3 mb-5">
+                      <div class="col-6">
+                        <img src="assets/imgs/search/image-40.jpg" class="w-100 light-shadow" alt="">
+                      </div>
+                      <div class="col-6">
+                        <p class="color-grey mb-1">Playlist</p>
+                        <div class="fw-bold fs-4 text-light">Frequecy</div>
+                        <p class="color-grey">Just Top Hits.</p>
+                      </div>
+                      <div class="col-12 mt-4">
+                        <div class="row">
+                          <div class="col-6 d-flex align-items-center">
+                            <!-- heart -->
+                            <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="25"
+                            height="25"
+                            fill="currentColor"
+                            class="bi bi-heart-fill color-green"
+                            viewBox="0 0 16 16"
+                            id="player-heart"
+                          >
+                          <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                          </svg>
+                          <!-- menu -->
+                          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-three-dots-vertical color-grey ms-4" viewBox="0 0 16 16">
+                            <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+                          </svg>
+                        </div>
+                          <div class="col-6 d-flex flex-row-reverse align-items-center">
+                            <div class="d-inline">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="white" class="bi bi-play-circle-fill ms-3" viewBox="0 0 16 16">
+                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814l-3.5-2.5z"/>
+                              </svg>
+                            </div>
+                            <p class="color-grey d-inline mb-0">134 brani</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
                   </div>
                 </div>
               </div>
