@@ -93,6 +93,7 @@ const appendTracks = function (datatracks) {
 };
 
 const playtracks = function (track) {
+  let i = 0;
   let playButton = document.getElementById("play-button");
   playButton.addEventListener("click", function () {
     let audioTrack = new Audio(track.tracks.data[0].preview);
@@ -116,6 +117,20 @@ const playtracks = function (track) {
         audioTrack.play();
       }
     });
+    let playerImg = document.getElementById("player-img");
+    playerImg.src = track.cover_small;
+    let playerTitle = document.getElementById("player-title");
+    playerTitle.textContent = track.tracks.data[0].title_short;
+    let playerGroup = document.getElementById("player-group");
+    playerGroup.textContent = track.artist.name;
+    let timeStart = document.getElementById("time-start");
+    timeStart.textContent = "0:00";
+    let timeEnd = document.getElementById("time-end");
+    timeEnd.textContent = `${Math.floor(track.tracks.data[0].duration / 60)}:${
+      track.tracks.data[0].duration % 60
+    }`;
+    let playerBar = document.getElementById("player-bar");
+    playerBar.classList.remove("avanzamento");
   });
 };
 
