@@ -143,6 +143,7 @@
       </div>
       <!-- Main content -->
         <div class="color-17 col-12 col-lg-8 col-xl-7 mb-0 mb-lg-5 overflow-scroll add-height-main" id="mainSearch">
+          <div class="h2 d-block d-lg-none text-light pt-4 pb-2">Cerca</div>
           <nav class="d-flex py-2 w-100">
             <div
               class="me-auto d-flex justify-content-center align-items-center p-1 d-none d-lg-block"
@@ -183,7 +184,12 @@
             
             <!-- BARRA DI RICERCA -->
             <div class="py-1">
-              <input class="form-control rounded-pill me-2 enlarge py-2" id="searchBar" type="search" placeholder="Cerca artisti, canzoni o podcast" aria-label="Search" >
+              <input class="d-none d-lg-inline form-control d-lg-rounded-pill me-2 enlarge py-2" id="searchBar" type="search" placeholder="Cerca artisti, canzoni o podcast" aria-label="Search" >
+            </div>
+
+            <!-- BARRA RICERCA PER TELEFONO -->
+            <div class="py-1">
+              <input class="d-block d-lg-none form-control me-2 enlarge py-2 bg-dark border-0 fw-bold"  type="search" placeholder="Cosa vuoi ascoltare?" aria-label="Search" >
             </div>
 
             <div
@@ -220,7 +226,8 @@
           
           <div class="row add-height-search" id="sfogliaTutto">
               <div class="col-12 my-4 text-light mb-5">
-                <span class="h3">Sfoglia tutto</span>
+                <span class="h3 d-none d-lg-inline">Sfoglia tutto</span>
+                <span class="h3 d-block d-lg-none text-center">Sfoglia tutto</span>
                 <div class="row mb-5 mt-5">
 
                   <div class="col-6 col-lg-3 mb-5">
