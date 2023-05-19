@@ -136,3 +136,15 @@ h2 {
 .svg-hover:hover{
  color: #ffffff; 
 }
+
+.color-green{
+  color: #1fdf64;
+}
+
+.light-shadow{
+  box-shadow: 0px 0px 10px rgba(256, 256, 256, 0.3);
+}
+
+.color-dark-t{
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1))
+}
