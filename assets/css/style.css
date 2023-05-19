@@ -99,6 +99,7 @@ h2 {
   margin-left: 0;
 }
 .row {
+  z-index: 5;
   padding-left: 0;
   padding-right: 0;
 }
@@ -131,4 +132,7 @@ h2 {
   border-radius: 50%;
   width: 40px;
   height: 40px;
+}
+.svg-hover:hover{
+ color: gray; 
 }

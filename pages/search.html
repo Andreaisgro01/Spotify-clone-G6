@@ -31,12 +31,12 @@
           </svg></button>
           </div>
           <div>
-          <button type="button" class="btn color-grey"><a class="color-grey" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16">
+            <button type="button" class="btn color-grey"><a class="svg-hover color-grey text-decoration-none" href="../index.html"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16">
               <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146ZM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5Z"/>
-          </svg></a> <span class="ms-4 fw-bold color-grey">Home</span></button>
+          </svg><span class="ms-4 fw-bold color-grey">Home</span></a></button>
           </div>
           <div>
-          <a href="pages/search.html"><button type="button" class="btn color-grey"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+          <a href="pages/search.html " class="svg-hover"><button type="button" class="btn color-grey"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
               <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
           </svg><span class="ms-4 fw-bold color-grey">Cerca </span></button></a>
           </div>
@@ -143,6 +143,7 @@
       </div>
       <!-- Main content -->
         <div class="color-17 col-12 col-lg-8 col-xl-7 mb-0 mb-lg-5 overflow-scroll add-height-main" id="mainSearch">
+          <div class="h2 d-block d-lg-none text-light pt-4 pb-2">Cerca</div>
           <nav class="d-flex py-2 w-100">
             <div
               class="me-auto d-flex justify-content-center align-items-center p-1 d-none d-lg-block"
@@ -177,19 +178,27 @@
                   />
                 </svg>
               </a>
-              
+             
               
             </div>
-            
             <!-- BARRA DI RICERCA -->
             <div class="py-1">
-              <input class="form-control rounded-pill me-2 enlarge py-2" id="searchBar" type="search" placeholder="Cerca artisti, canzoni o podcast" aria-label="Search" >
+              <input class="d-none d-lg-inline form-control d-lg-rounded-pill me-2 enlarge py-2" id="searchBar" type="search" placeholder="Cerca artisti, canzoni o podcast" aria-label="Search" >
+            </div>             
+
+
+            <!-- BARRA RICERCA PER TELEFONO -->
+            <div class="py-1 input-group d-flex align-items-center bg-dark rounded-2 d-block d-lg-none ">
+              <span class=" text-secondary ps-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="18" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+              </svg></span>
+              <input class="form-control me-2 enlarge py-2 border-0 fw-bold bg-dark"  type="search" placeholder="Cosa vuoi ascoltare?" aria-label="Search" >
             </div>
 
             <div
               class="d-flex justify-content-center align-items-center bg-black rounded-pill d-none d-lg-inline"
             >
-              <a href="#" class="ms-1">
+              <a href="#" class="ms-1 mt-4">
                 <img
                   src="../assets/imgs/main/image-15.jpg"
                   class="profileLogo"
@@ -197,7 +206,7 @@
                 />
               </a>
               <div
-                class="dropdown d-flex justify-content-center align-items-center d-inline"
+                class="dropdown d-inline"
               >
                 <a
                   class="btn btn-balck text-light dropdown-toggle"
@@ -220,7 +229,8 @@
           
           <div class="row add-height-search" id="sfogliaTutto">
               <div class="col-12 my-4 text-light mb-5">
-                <span class="h3">Sfoglia tutto</span>
+                <span class="h3 d-none d-lg-inline">Sfoglia tutto</span>
+                <span class="h3 d-block d-lg-none text-center">Sfoglia tutto</span>
                 <div class="row mb-5 mt-5">
 
                   <div class="col-6 col-lg-3 mb-5">
