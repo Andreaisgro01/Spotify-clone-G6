@@ -18,7 +18,7 @@ const ALBUM_URL = "https://striveschool-api.herokuapp.com/api/deezer/album/";
 let addressBarContent = new URLSearchParams(window.location.search);
 let albumId = addressBarContent.get("albumId");
 let appendAlbum = document.getElementById("append-album");
-let albumCover = document.getElementById("album-cover");
+let albumCover = document.querySelector(".album-cover");
 
 const getAlbum = () => {
   fetch(ALBUM_URL + albumId)
@@ -43,8 +43,8 @@ const getAlbum = () => {
 };
 
 const appendCover = function (datacover) {
-  let coverlist = datacover.tracks.data;
-  albumCover.innerHTML = `<div class="card color-17 text-light d-flex mt-3 bt-0"> 
+  
+  albumCover.innerHTML = `<div class="album-cover"  text-light d-flex mt-3 bt-0"> 
     <div class="row "> 
       <div class="col-md-3 mt-5 mb-3 ">
         <img id="img" src="${
@@ -72,6 +72,8 @@ const appendCover = function (datacover) {
       </div>
     </div>
   </div>`;
+
+
 };
 
 const appendTracks = function (datatracks) {
@@ -105,6 +107,10 @@ const playtracks = function (track) {
 window.onload = () => {
   getAlbum();
 };
+
+
+
+
 // crea un canvas con l'immagine e ne ritorno il context 2d
 const draw = function (img) {
   let canvas = document.createElement('canvas')
@@ -165,6 +171,7 @@ const pad = function (hex) {
 
 
 const start = function () {
+  
   // prendo il riferimento all'immagine del dom
   let imgReference = document.querySelector('#img')
 
@@ -178,10 +185,13 @@ const start = function () {
   let mostRecurrent = findMostRecurrentColor(allColors)
 
   // se necessario, aggiunge degli '0' per rendere il risultato un valido colore esadecimale
-  let mostRecurrentHex = pad(mostRecurrent)
+  let mostRecurrentHex = "#" + pad(mostRecurrent)
 
   // console.log del risultato
   console.log(mostRecurrentHex)
+  albumCover.style.backgroundColor = mostRecurrentHex;
+
+
 }
 
 
