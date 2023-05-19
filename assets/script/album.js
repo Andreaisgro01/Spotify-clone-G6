@@ -1,82 +1,84 @@
-let heartDecoration = document.getElementById('heart-tool');
+let heartDecoration = document.getElementById("heart-tool");
 
 heartDecoration.addEventListener("click", function () {
-    if (heartDecoration.classList.contains("bi-heart")) {
-      heartDecoration.classList.remove("bi-heart");
-      heartDecoration.classList.add("bi-heart-fill");
-      heartDecoration.innerHTML = `<path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>`;
-    } else {
-      heartDecoration.classList.add("bi-heart");
-      heartDecoration.classList.remove("bi-heart-fill");
-      heartDecoration.innerHTML = `<path
+  if (heartDecoration.classList.contains("bi-heart")) {
+    heartDecoration.classList.remove("bi-heart");
+    heartDecoration.classList.add("bi-heart-fill");
+    heartDecoration.innerHTML = `<path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>`;
+  } else {
+    heartDecoration.classList.add("bi-heart");
+    heartDecoration.classList.remove("bi-heart-fill");
+    heartDecoration.innerHTML = `<path
           d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"
         />`;
-    }
-  });
+  }
+});
 
-  const ALBUM_URL =  "https://striveschool-api.herokuapp.com/api/deezer/album/"
-let addressBarContent = new URLSearchParams(window.location.search)
-let albumId = addressBarContent.get('albumId')
-let appendAlbum = document.getElementById('append-album')
-let albumCover = document.getElementById('album-cover')
+const ALBUM_URL = "https://striveschool-api.herokuapp.com/api/deezer/album/";
+let addressBarContent = new URLSearchParams(window.location.search);
+let albumId = addressBarContent.get("albumId");
+let appendAlbum = document.getElementById("append-album");
+let albumCover = document.getElementById("album-cover");
 
-
-
-const getAlbum = () =>{
+const getAlbum = () => {
   fetch(ALBUM_URL + albumId)
-  
-  .then((res) => {
-    console.log('RES', res)
-    if (res.ok) {
+    .then((res) => {
+      console.log("RES", res);
+      if (res.ok) {
+        return res.json();
+      } else {
+        throw new Error("Error album");
+      }
+    })
+    .then((data) => {
+      console.log(data);
+      appendTracks(data);
+      appendCover(data);
+      playtracks(data);
+    })
 
-        return res.json()
-    } else {
-        throw new Error('Error album')
-    }
-})
-  .then((data)=>{
-    console.log(data)
-    appendTracks (data) 
-    appendCover (data)
-  })
+    .catch((err) => {
+      console.log(err);
+    });
+};
 
-  .catch((err)=>{
-    console.log(err)
-  })
-
-}
-
-const appendCover = function(datacover){
-  let coverlist= datacover.tracks.data
-    albumCover.innerHTML = `<div class="card color-17 text-light d-flex mt-3 bt-0"> 
+const appendCover = function (datacover) {
+  let coverlist = datacover.tracks.data;
+  albumCover.innerHTML = `<div class="card color-17 text-light d-flex mt-3 bt-0"> 
     <div class="row "> 
       <div class="col-md-3 mt-5 mb-3 ">
-        <img src="${datacover.cover_xl}" class="img-fluid rounded-start ms-5 mb-2" height="230" width="230" alt="...">
+        <img src="${
+          datacover.cover_xl
+        }" class="img-fluid rounded-start ms-5 mb-2" height="230" width="230" alt="...">
       </div>
       <div id="current-album" class="col-md-9 mt-5">
         <div class="card-body ms-0 ps-0 ">
         <p class="card-text fw-bold" >ALBUM</p>
         <h5 class="card-title display-3 fw-bold ">${datacover.title}</h5>
         <div class="d-flex">
-          <img src="${datacover.artist.picture_small}" class= "rounded-circle" height="40">
-          <p class="card-text ms-2 mt-2"><span class="fw-bold">${datacover.artist.name}</span>•${datacover.release_date.slice(0,4)}•${datacover.tracks.data.length} brani•${Math.floor(datacover.duration/60)} min ${datacover.duration %60} sec</p>
+          <img src="${
+            datacover.artist.picture_small
+          }" class= "rounded-circle" height="40">
+          <p class="card-text ms-2 mt-2"><span class="fw-bold">${
+            datacover.artist.name
+          }</span>•${datacover.release_date.slice(0, 4)}•${
+    datacover.tracks.data.length
+  } brani•${Math.floor(datacover.duration / 60)} min ${
+    datacover.duration % 60
+  } sec</p>
           <p class="card-text"></p>
           </div>
         </div>
       </div>
     </div>
-  </div>`
-  
-}
+  </div>`;
+};
 
-
-
-
-const appendTracks =  function (datatracks){
-  let tracklist = datatracks.tracks.data
-  let trackSelector = 0 
-  tracklist.forEach(track => {
-    trackSelector += 1
+const appendTracks = function (datatracks) {
+  let tracklist = datatracks.tracks.data;
+  let trackSelector = 0;
+  tracklist.forEach((track) => {
+    trackSelector += 1;
     appendAlbum.innerHTML += `<div class="col-7 d-flex align-items-center"><span class="px-3 text-light">${trackSelector}</span>
     <div>
       <p class="text-light fw-bold mb-0">${track.title}</p>
@@ -84,26 +86,25 @@ const appendTracks =  function (datatracks){
     </div>
   </div>
   <div class="col-4 d-flex align-items-center">${track.rank}</div>
-  <div class="col-1 d-flex align-items-center flex-row-reverse pe-5">${Math.floor((track.duration)/60)}:${(track.duration) % 60}</div>`  
+  <div class="col-1 d-flex align-items-center flex-row-reverse pe-5">${Math.floor(
+    track.duration / 60
+  )}:${track.duration % 60}</div>`;
   });
-  
-}
+};
+
+const playtracks = function (track) {
+  let playButton = document.getElementById("play-button");
+  playButton.addEventListener("click", function () {
+    console.log("bottone cliccato");
+    console.log(track.tracks.data[0].preview);
+    let audioTrack = new Audio(track.tracks.data[0].preview);
+    audioTrack.play();
+  });
+};
 
 window.onload = () => {
-  getAlbum()
-}
-
-
-
-
-
-
-
-
-
-
-
-
+  getAlbum();
+};
 
 // "album":{
 //"id":331818647,
