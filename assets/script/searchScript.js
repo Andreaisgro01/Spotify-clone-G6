@@ -21,17 +21,17 @@ const search = () => {
       let songResults = data.data;
       songResults.forEach((element) => {
         let cardTemplate = `
-                <div class="col-md-12">
+                <div class="col-12">
                 <div class="row my-1">
-                  <div class="col-md-12">
+                  <div class="col-12">
                     <div class="card bg-transparent text-light border-0 search-hover">
                       <div class="row g-0">
-                        <div class="col-md-1">
+                        <div class="col-1">
                         <a class="text-decoration-none" href="album.html?albumId=${element.album.id}"><img src=${
                           element.album.cover
                         } class="img-fluid rounded-1 ms-3 mt-3 mb-3" alt="cover canzone"></a>
                         </div>
-                        <div class="col-md-8">
+                        <div class="col-8">
                           <div class="card-body ms-3">
                             <h5 class="card-title"><a class="text-decoration-none text-light" href="album.html?albumId=${element.album.id}">${element.title}</a></h5>
                             <p class="card-text text-secondary"><a class="text-decoration-none text-light underline-me" href="artist.html?artistId=${element.artist.id}">${
@@ -39,7 +39,7 @@ const search = () => {
                             }</a></p>
                           </div>
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-3">
                           <div class="card-body d-flex flex-row-reverse">
                             <p class="d-inline me-5 ms-3">${Math.floor(
                               element.duration / 60
