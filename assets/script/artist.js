@@ -97,8 +97,12 @@ const popularFill = (popular) => {
     targetSong.innerHTML += `
         <div class="col-8 mt-5">
             <span>${popularCounter}</span>
-            <img width="70" class="px-2" src="${element.album.cover}" alt="foto">
-            <span>${element.title}</span>
+            <img width="70" class="px-2" src="${
+              element.album.cover
+            }" alt="foto">
+            <a class="text-decoration-none text-light underline-me" href="album.html?albumId=${
+              element.album.id
+            }"><span>${element.title}</span></a>
         </div>
         <div class="col-3 p-0">
             <span>${element.rank}</span>
